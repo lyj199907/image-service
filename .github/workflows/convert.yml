@@ -77,7 +77,7 @@ jobs:
           echo "Environment variable value: $FSCK_PATCH_PATH"
           tree /
           cd erofs-utils 
-          tree -L 3 /
+          tree -L 1 /
           git apply ../${{ env.FSCK_PATCH_PATH }} && ./autogen.sh && ./configure && make && cd ..
           sudo cp erofs-utils/fsck/fsck.erofs /usr/local/bin/
       - name: Upload fsck.erofs
