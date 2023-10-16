@@ -75,7 +75,7 @@ jobs:
           git clone https://git.kernel.org/pub/scm/linux/kernel/git/xiang/erofs-utils.git
           tree
           echo "Environment variable value: $FSCK_PATCH_PATH"
-          cd /
+          tree /
           cd erofs-utils 
           tree
           git apply ../${{ env.FSCK_PATCH_PATH }} && ./autogen.sh && ./configure && make && cd ..
